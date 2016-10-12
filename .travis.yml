@@ -26,4 +26,7 @@ services:
 before_install:
   - pip install codecov
 after_success:
+  - coverage report
+  - coverage xml
+  - cat coverage.xml
   - codecov
